@@ -1,0 +1,10 @@
+# Program output
+*.log
+
+# Zig
+zig-cache/
+zig-out/
+
+# VIM
+.sw?
+.*.sw?
