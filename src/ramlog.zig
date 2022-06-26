@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC0-1.0
 // Made by GreaseMonkey, 2022.
 
-// pub const log_level = .notice;
+// pub const log_level = .info;
 
 pub const log_file_name = "ramlog.log";
 
@@ -26,7 +26,7 @@ var ram_total: usize = 0;
 var ram_allocatable: usize = 0;
 
 pub fn main() anyerror!void {
-    log.notice("Starting", .{});
+    log.info("Starting", .{});
 
     write_to_log_file("Monitoring started", .{});
     while (true) {

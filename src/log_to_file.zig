@@ -67,12 +67,12 @@ pub fn write_to_log_file(comptime msg: []const u8, args: anytype) void {
         }
 
         if (log_goes_to_stdout) {
-            log.notice("Opening log to stdout", .{});
+            log.info("Opening log to stdout", .{});
             log_file = std.io.getStdOut();
             log_writer = log_file.?.writer();
-            log.notice("Log to stdout opened", .{});
+            log.info("Log to stdout opened", .{});
         } else {
-            log.notice("Opening log file", .{});
+            log.info("Opening log file", .{});
             var fp = std.fs.cwd().createFile(log_file_name, .{
                 .read = false,
                 .truncate = false,
@@ -89,7 +89,7 @@ pub fn write_to_log_file(comptime msg: []const u8, args: anytype) void {
             };
             log_file = fp;
             log_writer = log_file.?.writer();
-            log.notice("Log file opened", .{});
+            log.info("Log file opened", .{});
         }
     }
 

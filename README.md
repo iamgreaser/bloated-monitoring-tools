@@ -10,7 +10,7 @@ But because we live in a world where Electron is called what it is, I guess I ne
 
 ## Building
 
-This currently runs in Zig 0.8.1 because that's what Void Linux has in its repositories right now, but the moment this breaks on the latest Zig release, I'm going to switch over to that.
+This currently runs in Zig 0.9.1 because that's what Void Linux has in its repositories right now, but the moment this breaks on the latest Zig release, I'm going to switch over to that.
 
 ```
 zig build -Drelease-safe
